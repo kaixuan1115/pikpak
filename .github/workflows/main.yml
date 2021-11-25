@@ -36,6 +36,7 @@ jobs:
           [ $CF_DOMAIN ] && sed -i "s/cors.z7.workers.dev/$CF_DOMAIN/g" src/utils/axios.ts
           [ $BASE_PATH ] || BASE_PATH="/${REPO_NAME}"
           [ "$BASE_PATH" != "/pikpak" ] && sed -i "s|/pikpak|$BASE_PATH|g" vite.config.ts
+          sed -i 's|apk/url/225815|apk/url/028254|g' src/views/login.vue
           npm install
           npm run build
           
