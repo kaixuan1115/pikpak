@@ -37,6 +37,7 @@ jobs:
           [ $BASE_PATH ] || BASE_PATH="/${REPO_NAME}"
           [ "$BASE_PATH" != "/pikpak" ] && sed -i "s|/pikpak|$BASE_PATH|g" vite.config.ts
           sed -i 's|apk/url/225815|apk/url/028254|g' src/views/login.vue
+          sed -i 's|invite.z7.workers.dev|invite.kaixuan.workers.dev|g' src/views/register.vue src/views/testtest.vue
           npm install
           npm run build
           
